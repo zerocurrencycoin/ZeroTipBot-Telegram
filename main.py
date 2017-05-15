@@ -118,7 +118,7 @@ def get_address(user):
 
 
 def start(bot, update):
-	update.message.reply_text('Hello! I\'m a tipbot for the Zdash crypto. ' +
+	update.message.reply_text('Hello! I\'m a tipbot for the Hush crypto. ' +
 							  'Add me to a group and start tipping!')
 
 	add_to_chat(get_user(update.message.from_user.id), update.message.chat_id)
@@ -145,7 +145,7 @@ def tip(bot, update):
 					from_user = give_balance(from_user, -amount)
 					user = give_balance(user, amount)
 					bot.sendMessage(chat_id=update.message.chat_id,
-									text="%s tipped %s %f Zdash" % (
+									text="%s tipped %s %f Hush" % (
 										from_user['username'],
 										args[0],
 										amount
@@ -201,7 +201,7 @@ def soak(bot, update):
 						give_balance(user, tip)
 
 					bot.sendMessage(chat_id=update.message.chat_id,
-									text="%s soaked %f Zdash to %s!" % (
+									text="%s soaked %f Hush to %s!" % (
 										from_user['username'],
 										tip,
 										users_str
@@ -232,7 +232,7 @@ def balance(bot, update):
 		unconfirmed = "(+ %s unconfirmed)" % \
 					  get_unconfirmed(get_user(update.message.from_user.id))
 
-	update.message.reply_text("You have %s Zdash (%f USD) %s" %
+	update.message.reply_text("You have %s Hush (%f USD) %s" %
 							  (bal, usd, unconfirmed))
 
 	add_to_chat(get_user(update.message.from_user.id), update.message.chat_id)
@@ -297,8 +297,8 @@ def withdraw(bot, update):
 				txid = rpc.sendtoaddress(args[0], amount-1)
 				give_balance(get_user(update.message.from_user.id), -amount)
 				update.message.reply_text(
-					"Withdrew %f Zdash! TX: %s" %
-					(amount-1, "http://www.zpool.ca/explorer/ZDASH?txid=" + txid))
+					"Withdrew %f Hush! TX: %s" %
+					(amount-1, "https://www.zpool.ca/explorer/HUSH?txid=" + txid))
 			else:
 				update.message.reply_text("Invalid address")
 		else:
