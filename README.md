@@ -1,6 +1,6 @@
 # Zero Tip Bot for Telegram
 
-This is a telegram bot that allows you to tip Hush to people.
+This is a telegram bot that allows you to tip Zero to people.
 
 Username: [@ZeroTipBot](https://t.me/ZeroTipBot)
 
