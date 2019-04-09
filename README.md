@@ -1,6 +1,6 @@
 # Zero Tip Bot for Telegram
 
-This is a telegram bot that allows you to tip [Zero](https://coinmarketcap.com/currencies/zero/) to people.
+This is a Telegram bot that allows you to tip [Zero](https://coinmarketcap.com/currencies/zero/) to people.
 
 Username: [@ZeroTipBot](https://t.me/ZeroTipBot)
 
